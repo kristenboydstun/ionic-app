@@ -4,7 +4,9 @@
   The EventsCtrl pulls data from the Events service (service.js)
   The Events service returns an array of event data
 -->
-<ion-view title="{{event.name}}">
+<ion-view title="{{event.title}}">
   <ion-content has-header="true" padding="true">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'></ui-gmap-google-map>
+    <h3>What now</h3>
   </ion-content>
 </ion-view>
