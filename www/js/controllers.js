@@ -11,5 +11,5 @@ angular.module('starter.controllers', [])
   $scope.event = Events.get($stateParams.eventId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('CreateCtrl', function($scope) {
 });
