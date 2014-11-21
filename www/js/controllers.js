@@ -11,5 +11,12 @@ angular.module('starter.controllers', [])
   $scope.event = Events.get($stateParams.eventId);
 })
 
-.controller('CreateCtrl', function($scope) {
+.controller('CreateCtrl', function($scope, Events) {
+   // Called when the form is submitted
+
+  $scope.createEvent = function(event) {
+    console.log("here");
+    Events.create(event);
+    event = {};
+  };
 });

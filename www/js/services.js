@@ -21,6 +21,9 @@ angular.module('starter.services', [])
     get: function(eventId) {
       // Simple index lookup
       return events[eventId];
+    },
+    create: function(event) {
+      events.push({name: event.title});
     }
   }
 });
