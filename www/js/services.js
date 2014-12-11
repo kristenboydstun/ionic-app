@@ -16,6 +16,8 @@ angular.module('starter.services', [])
     },
     get: function(eventId) {
       // Simple index lookup
+      console.log("wow REALLY!");
+      console.log(eventId);
       return events[eventId];
     },
     create: function(event) {

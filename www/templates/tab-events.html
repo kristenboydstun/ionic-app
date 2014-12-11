@@ -5,5 +5,15 @@
         {{event.title}}
       </ion-item>
     </ion-list>
+    <form ng-submit="findEvent(event.id)">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="Event ID" ng-model="event.id">
+        </label>
+        <button type="submit" class="button button-energized button-full">
+          Take me to my event {{event.id}}
+        </button>
+      </div>
+    </form>
   </ion-content>
 </ion-view>

@@ -3,8 +3,16 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {
 })
 
-.controller('EventsCtrl', function($scope, Events) {
+.controller('EventsCtrl', function($scope, $state, Events) {
   $scope.events = Events.all();
+
+  $scope.findEvent = function(event_id) {
+    console.log("Looking up your event!");
+    console.log(event_id);
+    Events.get(event_id);
+    $state.go('tab.event-detail',{eventId: event_id});
+    event = {};
+  };
 })
 
 .controller('EventDetailCtrl', function($scope, $stateParams, Events, Locations, Geocoder) {
